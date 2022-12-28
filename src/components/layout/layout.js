@@ -1,7 +1,8 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { GlobalStyle } from "../styles/GlobalStyle"
 import "./layout.css"
+import Header from "./Header"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,17 +24,9 @@ const Layout = ({ children }) => {
           padding: `var(--size-gutter)`,
         }}
       >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+      <GlobalStyle />
+      <Header/>
+        <main>{children}</main>        
       </div>
     </>
   )

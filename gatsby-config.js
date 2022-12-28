@@ -9,11 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-  },
+	  title: `Design+Code`,
+	  description: `Don’t skip design. Learn design and code by building real apps with React and Swift. Complete courses about the best tools.`,
+	  author: `@mengto`,
+	},
   plugins: [
     `gatsby-plugin-image`,
     {
@@ -23,6 +22,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-styled-components`,
+    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
